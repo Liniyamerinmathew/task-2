@@ -40,4 +40,65 @@ public class Main {
         largest = c > temp ? c : temp;
         System.out.println("The largest number is: " + largest);
     }
+    public static void SmallestOf_3() {
+        int a, b, c, smallest, temp;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        a = sc.nextInt();
+        System.out.println("Enter the second number:");
+        b = sc.nextInt();
+        System.out.println("Enter the third number:");
+        c = sc.nextInt();
+        temp = a > b ? b : a;
+        smallest = c > temp ? temp : c;
+        System.out.println("The smallest number is: " + smallest);
+    }
+    public static void Prime() {
+        int i, n = 0, m = 0, flag = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the  number to check:");
+        n = sc.nextInt();
+        m = n / 2;
+        if (n == 0 || n == 1) {
+            System.out.println(n + " not a prime number");
+        } else {
+            for (i = 2; i <= m; i++) {
+                if (n % i == 0) {
+                    System.out.println(n + " not a prime number");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(n + " is a prime number");
+            }
+        }
+    }
+    public static void EvenOrOdd() {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        if (num % 2 == 0)
+            System.out.println(num + " is even");
+        else
+            System.out.println(num + " is odd");
+    }
+    public static void Reverse() {
+        System.out.print("Enter an integer number:");
+        int number = new Scanner(System.in).nextInt();
+        int reverse = 0;
+        int tempNumber = number;
+        while(number > 0) {
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number / 10;
+        }
+        System.out.print("The reverse of the given number is = "+reverse);
+
+    }
+
+
 }
