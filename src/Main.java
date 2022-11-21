@@ -40,4 +40,17 @@ public class Main {
         largest = c > temp ? c : temp;
         System.out.println("The largest number is: " + largest);
     }
+    public static void SmallestOf_3() {
+        int a, b, c, smallest, temp;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        a = sc.nextInt();
+        System.out.println("Enter the second number:");
+        b = sc.nextInt();
+        System.out.println("Enter the third number:");
+        c = sc.nextInt();
+        temp = a > b ? b : a;
+        smallest = c > temp ? temp : c;
+        System.out.println("The smallest number is: " + smallest);
+    }
 }
